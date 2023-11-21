@@ -2,5 +2,8 @@
   "editor.defaultFormatter": "SimonSiefke.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
