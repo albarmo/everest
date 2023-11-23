@@ -14,7 +14,7 @@
     ]
   },
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "node index.js",
     "dev": "nodemon app.js",
     "test": "jest --detectOpenHandles --verbose false --forceExit --coverage",
     "prepare": "husky install"
