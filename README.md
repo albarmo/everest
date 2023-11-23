@@ -1,6 +1,9 @@
-# everest
-Users and account Data Center for trailblaze application.
+# tcr-elbrus-server
 
-## Run on Development
-1. `npm install`
-2. `npm run dev`
+An competence test for tcr-elbrus Solusi Teknologi, this app using postgres as database.
+
+## How to run development mode
+
+- install: `npm install`
+- start : `nodemon app.js`
+- test : `npm test`

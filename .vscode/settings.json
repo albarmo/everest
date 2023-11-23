@@ -1,12 +1,9 @@
 {
   "editor.defaultFormatter": "SimonSiefke.prettier-vscode",
   "[javascript]": {
-    "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+    "editor.defaultFormatter": "svipas.prettier-plus"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }

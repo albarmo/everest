@@ -1,45 +1,64 @@
 {
-  "name": "everest",
+  "name": "tcr-srv",
   "version": "1.0.0",
-  "description": "Managing users (account) services",
-  "main": "dist/index",
-  "types": "dist/index",
+  "description": "Backend for tcr-elbrus App",
+  "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{json,css,md}": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
-    "build": "npx tsc",
     "start": "nodemon ./bin/www",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "test": "jest --detectOpenHandles --verbose false --forceExit --coverage",
     "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albarmo/magin-server.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albarmo/magin-server/issues"
+  },
+  "homepage": "https://github.com/albarmo/magin-server#readme",
   "dependencies": {
-    "axios": "^1.6.2",
+    "axios": "^0.26.0",
     "bcryptjs": "^2.4.3",
+    "cookie": "^0.5.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
+    "dotenv": "^10.0.0",
+    "eslint-config-airbnb": "^19.0.2",
+    "express": "^4.17.3",
     "express-session": "^1.17.3",
-    "husky": "^8.0.3",
-    "jest": "^29.7.0",
-    "jsonwebtoken": "^9.0.2",
-    "lint-staged": "^15.1.0",
+    "google-auth-library": "^9.1.0",
+    "jest": "^27.4.5",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
-    "pg": "^8.11.3",
-    "pg-hstore": "^2.3.4",
-    "sequelize": "^6.35.1",
-    "sequelize-cli": "^6.6.2",
-    "supertest": "^6.3.3",
-    "uuid": "^9.0.1"
+    "multer": "^1.4.4",
+    "nodemailer": "^6.9.5",
+    "nodemon": "^2.0.15",
+    "passport": "^0.6.0",
+    "passport-google-oauth2": "^0.2.0",
+    "pg": "^8.7.1",
+    "sequelize": "^6.12.1",
+    "sequelize-cli": "^6.3.0",
+    "supertest": "^6.1.6",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/morgan": "^1.9.9",
-    "@types/node": "^20.9.3",
-    "concurrently": "^8.2.2",
-    "nodemon": "^3.0.1",
-    "typescript": "^5.3.2"
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.3",
+    "prettier": "2.5.1"
   }
 }
